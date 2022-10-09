@@ -10,3 +10,5 @@ the backup.
 Just run `backup`. The script will synchronize the files between the source and the destination (containing the previous
 backups). If files are added or modified in the source paths, they will be added or modified in the destination path
 too. Likewise, if files have been deleted in the source paths, they will be deleted too in the destination path.
+
+TIP: Several source paths can be backed up. Just add a line per path.
