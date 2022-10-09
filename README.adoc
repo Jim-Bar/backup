@@ -1,0 +1,10 @@
+= Backup script
+
+== How to install
+
+Put the script under `/usr/local/bin/`. Then modify it to add the paths to backup, and the destination where to save
+the backup.
+
+== How to use
+
+Just run `backup`.
