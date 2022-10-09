@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+BACKUP_DIR="/destination/path"
+
+if [ ! -d "${BACKUP_DIR}" ]; then
+    echo "Backup directory does not exist: ${BACKUP_DIR}" 1>&2
+    exit 1
+fi
+
+# https://www.howtogeek.com/427480/how-to-back-up-your-linux-system
+# https://dev.to/iggredible/how-to-use-rsync-to-backup-your-file-6p1
+rsync --archive --delete /source/path "${BACKUP_DIR}"
+echo "Last backup: $(date).\nScript used for backup (${0}):\n$(cat ${0})" > "${BACKUP_DIR}"/last_backup.txt
