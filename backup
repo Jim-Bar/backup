@@ -9,5 +9,6 @@ fi
 
 # https://www.howtogeek.com/427480/how-to-back-up-your-linux-system
 # https://dev.to/iggredible/how-to-use-rsync-to-backup-your-file-6p1
-rsync --archive --delete /source/path "${BACKUP_DIR}"
+rsync --archive --delete --mkpath /source/path/1 "${BACKUP_DIR}"/dest/path/1
+rsync --archive --delete --mkpath /source/path/2 "${BACKUP_DIR}"/dest/path/2
 echo "Last backup: $(date).\nScript used for backup (${0}):\n$(cat ${0})" > "${BACKUP_DIR}"/last_backup.txt
